@@ -1,0 +1,58 @@
+[
+    {
+        "model": "taco2goapi.topping",
+        "pk": 1,
+        "fields": {
+            "type": "Lettuce"
+        }
+    },
+    {
+        "model": "taco2goapi.topping",
+        "pk": 2,
+        "fields": {
+            "type": "Cilantro"
+        }
+    },
+    {
+        "model": "taco2goapi.topping",
+        "pk": 3,
+        "fields": {
+            "type": "Onions"
+        }
+    },
+    {
+        "model": "taco2goapi.topping",
+        "pk": 4,
+        "fields": {
+            "type": "Jalapenos"
+        }
+    },
+    {
+        "model": "taco2goapi.topping",
+        "pk": 5,
+        "fields": {
+            "type": "Pico De Gallo"
+        }
+    },
+    {
+        "model": "taco2goapi.topping",
+        "pk": 6,
+        "fields": {
+            "type": "Shredded Cheese"
+        }
+    },
+    {
+        "model": "taco2goapi.topping",
+        "pk": 7,
+        "fields": {
+            "type": "Tomato"
+        }
+    },
+    {
+        "model": "taco2goapi.topping",
+        "pk": 8,
+        "fields": {
+            "type": "Grilled Corn"
+        }
+    }
+]

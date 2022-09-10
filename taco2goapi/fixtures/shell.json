@@ -1,0 +1,16 @@
+[
+    {
+        "model": "taco2goapi.shell",
+        "pk": 1,
+        "fields": {
+            "type": "Hard"
+        }
+    },
+    {
+        "model": "taco2goapi.shell",
+        "pk": 2,
+        "fields": {
+            "type": "Soft"
+        }
+    }
+] 

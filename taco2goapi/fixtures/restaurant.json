@@ -1,0 +1,18 @@
+[
+    {
+        "model": "taco2goapi.restaurant",
+        "pk": 1,
+        "fields": {
+            "restaurantName": "Mas Tacos Por Favor",
+            "address": "732 McFerrin Ave",
+            "zipCode": "37206-3500",
+            "phone": "+1 615-543-6271",
+            "website": "https://www.facebook.com/mastacos/",
+            "email": "eatmastacos@live.com",
+            "stateName": "TN",
+            "cityName": "Nashville",
+            "cuisineType": "Mexican",
+            "hoursInterval": "Mon - Tue (11:00 AM - 4:00 PM) | Wed - Fri (11:00 AM - 8:00 PM) | Sat (10:00 AM - 3:00 PM)"
+        }
+    }
+]

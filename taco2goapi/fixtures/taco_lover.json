@@ -1,0 +1,13 @@
+[
+    {
+        "model": "taco2goapi.tacolover",
+        "pk": 1,
+        "fields": {
+            "profilePic": null,
+            "userCity": "Nashville",
+            "email": "dw@me.com",
+            "userState": "TN",
+            "taco_lover_id": 1
+        }
+    }
+]

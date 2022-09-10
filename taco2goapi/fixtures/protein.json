@@ -1,0 +1,51 @@
+[
+    {
+        "model": "taco2goapi.protein",
+        "pk": 1,
+        "fields": {
+            "type": "Beef"
+        }
+    },
+    {
+        "model": "taco2goapi.protein",
+        "pk": 2,
+        "fields": {
+            "type": "Steak"
+        }
+    },
+    {
+        "model": "taco2goapi.protein",
+        "pk": 3,
+        "fields": {
+            "type": "Chicken"
+        }
+    },
+    {
+        "model": "taco2goapi.protein",
+        "pk": 4,
+        "fields": {
+            "type": "Pork"
+        }
+    },
+    {
+        "model": "taco2goapi.protein",
+        "pk": 5,
+        "fields": {
+            "type": "Fish"
+        }
+    },
+    {
+        "model": "taco2goapi.protein",
+        "pk": 6,
+        "fields": {
+            "type": "Shrimp"
+        }
+    },
+    {
+        "model": "taco2goapi.protein",
+        "pk": 7,
+        "fields": {
+            "type": "Black Beans"
+        }
+    }
+]

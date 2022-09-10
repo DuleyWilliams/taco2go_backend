@@ -1,0 +1,9 @@
+[
+    {
+        "model": "taco2goapi.rating",
+        "pk": 1,
+        "fields": {
+            "type": "Authentic"
+        }
+    }
+]
