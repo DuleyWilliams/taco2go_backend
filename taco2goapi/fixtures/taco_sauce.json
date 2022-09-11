@@ -1,0 +1,19 @@
+[
+    {
+        "model": "taco2goapi.tacosauce",
+        "pk": 1,
+        "fields": {
+            "myBuiltTacoId_id": 1,
+            "sauceId_id": 1
+        }
+    },
+    {
+        "model": "taco2goapi.tacosauce",
+        "pk": 2,
+        "fields": {
+            "myBuiltTacoId_id": 1,
+            "sauceId_id": 2
+        }
+    }
+
+]

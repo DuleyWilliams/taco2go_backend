@@ -1,0 +1,19 @@
+[
+    {
+        "model": "taco2goapi.tacotopping",
+        "pk": 1,
+        "fields": {
+            "myBuiltTacoId_id": 1,
+            "toppingId_id": 1
+        }
+    },
+    {
+        "model": "taco2goapi.tacotopping",
+        "pk": 2,
+        "fields": {
+            "myBuiltTacoId_id": 1,
+            "toppingId_id": 2
+        }
+    }
+
+]

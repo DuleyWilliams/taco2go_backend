@@ -1,0 +1,11 @@
+[
+    {
+        "model": "taco2goapi.myfavs",
+        "pk": 1,
+        "fields": {
+            "ratingId_id": 1,
+            "restaurantId_id": 1,
+            "tacoLoverId_id": 1
+        }
+    }
+]

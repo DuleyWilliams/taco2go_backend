@@ -14,7 +14,7 @@
         }
     },
     {
-        "model": "taco2goapiapi.sauce",
+        "model": "taco2goapi.sauce",
         "pk": 3,
         "fields": {
             "type": "Salsa"

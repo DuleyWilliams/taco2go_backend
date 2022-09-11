@@ -1,0 +1,11 @@
+[
+    {
+        "model": "taco2goapi.mybuilttaco",
+        "pk": 1,
+        "fields": {
+            "tacoLoverId_id": 1,
+            "tacoProteinId_id": 1,
+            "tacoShellId_id": 1
+        }
+    }
+]

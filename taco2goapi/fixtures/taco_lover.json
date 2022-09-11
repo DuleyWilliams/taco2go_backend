@@ -3,11 +3,11 @@
         "model": "taco2goapi.tacolover",
         "pk": 1,
         "fields": {
-            "profilePic": null,
+            "profilePic": "http://www.aol.com",
             "userCity": "Nashville",
             "email": "dw@me.com",
             "userState": "TN",
-            "taco_lover_id": 1
+            "user_id": 1
         }
     }
 ]
