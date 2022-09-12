@@ -3,9 +3,20 @@
         "model": "taco2goapi.mybuilttaco",
         "pk": 1,
         "fields": {
+            "name": "",
             "tacoLoverId_id": 1,
             "tacoProteinId_id": 1,
             "tacoShellId_id": 1
+        }
+    },
+    {
+        "model": "taco2goapi.mybuilttaco",
+        "pk": 2,
+        "fields": {
+            "name": "Super Beefy Basic",
+            "tacoLoverId_id": 1,
+            "tacoProteinId_id": 2,
+            "tacoShellId_id": 2
         }
     }
 ]
