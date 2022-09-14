@@ -5,4 +5,8 @@
         "--load-plugins=pylint_django",
         "--django-settings-module=taco2go.settings",
     ],
+    "cSpell.words": [
+        "goapi",
+        "viewsets"
+    ],
 }
