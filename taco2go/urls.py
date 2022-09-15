@@ -15,6 +15,7 @@ Including another URLconf
 """
 from rest_framework import routers
 from taco2goapi.views import MyBuiltTacoView
+from taco2goapi.views import ProteinView
 from django.contrib import admin
 from django.conf.urls import include
 from django.urls import path
@@ -22,6 +23,7 @@ from taco2goapi.views import register_user, login_user
 
 router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'mybuilttacos', MyBuiltTacoView, 'mybuilttaco')
+router.register(r'proteins', ProteinView, 'protein')
 
 urlpatterns = [
     path('register', register_user),
