@@ -45,9 +45,9 @@ class MyBuiltTacoView(ViewSet):
         """ Handles a PUT request for a menu item """
         editing_my_built_taco = MyBuiltTaco.objects.get(pk=pk)
         
-        editing_my_built_taco.tacoLoverId.id = request.data["tacoLoverId_id"]
-        editing_my_built_taco.tacoProteinId.id = request.data["tacoProteinId_id"]
-        editing_my_built_taco.tacoShellId.id = request.data["tacoShellId_id"]
+        editing_my_built_taco.tacoLoverId_id = request.data["tacoLoverId_id"]
+        editing_my_built_taco.tacoProteinId_id = request.data["tacoProteinId_id"]
+        editing_my_built_taco.tacoShellId_id = request.data["tacoShellId_id"]
         editing_my_built_taco.name = request.data["name"]
         editing_my_built_taco.save()
         
