@@ -20,6 +20,7 @@ from taco2goapi.views import RatingView
 from taco2goapi.views import SauceView
 from taco2goapi.views import ShellView
 from taco2goapi.views import ToppingView
+from taco2goapi.views import RestaurantView
 from django.contrib import admin
 from django.conf.urls import include
 from django.urls import path
@@ -32,6 +33,7 @@ router.register(r'ratings', RatingView, 'rating')
 router.register(r'sauces', SauceView, 'sauce')
 router.register(r'shells', ShellView, 'shell')
 router.register(r'toppings', ToppingView, 'topping')
+router.register(r'restaurants', RestaurantView, 'restaurant')
 
 urlpatterns = [
     path('register', register_user),
