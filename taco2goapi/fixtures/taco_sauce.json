@@ -3,7 +3,7 @@
         "model": "taco2goapi.tacosauce",
         "pk": 1,
         "fields": {
-            "myBuiltTacoId_id": 1,
+            "myBuiltTacoId_id": 3,
             "sauceId_id": 1
         }
     },
@@ -11,7 +11,7 @@
         "model": "taco2goapi.tacosauce",
         "pk": 2,
         "fields": {
-            "myBuiltTacoId_id": 1,
+            "myBuiltTacoId_id": 4,
             "sauceId_id": 2
         }
     }

@@ -3,16 +3,16 @@
         "model": "taco2goapi.tacotopping",
         "pk": 1,
         "fields": {
-            "myBuiltTacoId_id": 1,
-            "toppingId_id": 1
+            "myBuiltTacoId_id": 3,
+            "toppingId_id": 3
         }
     },
     {
         "model": "taco2goapi.tacotopping",
         "pk": 2,
         "fields": {
-            "myBuiltTacoId_id": 1,
-            "toppingId_id": 2
+            "myBuiltTacoId_id": 4,
+            "toppingId_id": 3
         }
     }
 
