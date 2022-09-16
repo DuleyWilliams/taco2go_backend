@@ -17,6 +17,9 @@ from rest_framework import routers
 from taco2goapi.views import MyBuiltTacoView
 from taco2goapi.views import ProteinView
 from taco2goapi.views import RatingView
+from taco2goapi.views import SauceView
+from taco2goapi.views import ShellView
+from taco2goapi.views import ToppingView
 from django.contrib import admin
 from django.conf.urls import include
 from django.urls import path
@@ -26,6 +29,9 @@ router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'mybuilttacos', MyBuiltTacoView, 'mybuilttaco')
 router.register(r'proteins', ProteinView, 'protein')
 router.register(r'ratings', RatingView, 'rating')
+router.register(r'sauces', SauceView, 'sauce')
+router.register(r'shells', ShellView, 'shell')
+router.register(r'toppings', ToppingView, 'topping')
 
 urlpatterns = [
     path('register', register_user),
