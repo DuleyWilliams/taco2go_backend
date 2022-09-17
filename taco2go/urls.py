@@ -15,6 +15,7 @@ Including another URLconf
 """
 from rest_framework import routers
 from taco2goapi.views import MyBuiltTacoView
+from taco2goapi.views import TacoLoverView
 from taco2goapi.views import ProteinView
 from taco2goapi.views import RatingView
 from taco2goapi.views import SauceView
@@ -31,6 +32,7 @@ from taco2goapi.views import register_user, login_user
 
 router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'mybuilttacos', MyBuiltTacoView, 'mybuilttaco')
+router.register(r'tacolovers', TacoLoverView, 'tacolover')
 router.register(r'proteins', ProteinView, 'protein')
 router.register(r'ratings', RatingView, 'rating')
 router.register(r'sauces', SauceView, 'sauce')

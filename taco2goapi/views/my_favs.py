@@ -16,7 +16,7 @@ class MyFavsView(ViewSet):
         """ Handle a GET request for a built taco"""
         try:
             my_favs = MyFavs.objects.get(pk=pk)
-            serializer = MyFavsSerializer(my_built_taco)
+            serializer = MyFavsSerializer(my_favs)
             return Response(serializer.data)
         except MyFavs.DoesNotExist as e:
             return Response({}, status=status.HTTP_404_NOT_FOUND)

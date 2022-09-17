@@ -1,4 +1,5 @@
 from .my_built_taco import MyBuiltTacoView
+from .taco_lover import TacoLoverView
 from .taco_sauce import TacoSauceView
 from .taco_topping import TacoToppingView
 from .protein import ProteinView
