@@ -23,6 +23,7 @@ from taco2goapi.views import ToppingView
 from taco2goapi.views import RestaurantView
 from taco2goapi.views import MyFavsView
 from taco2goapi.views import TacoSauceView
+from taco2goapi.views import TacoToppingView
 from django.contrib import admin
 from django.conf.urls import include
 from django.urls import path
@@ -38,6 +39,7 @@ router.register(r'toppings', ToppingView, 'topping')
 router.register(r'restaurants', RestaurantView, 'restaurant')
 router.register(r'myfavs', MyFavsView, 'myfav')
 router.register(r'tacosauces', TacoSauceView, 'tacosauce')
+router.register(r'tacotoppings', TacoToppingView, 'tacotopping')
 
 urlpatterns = [
     path('register', register_user),
