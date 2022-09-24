@@ -1,14 +1,18 @@
+import email
 from django.contrib.auth import authenticate
 from django.contrib.auth.models import User
 from rest_framework.authtoken.models import Token
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
+from taco2goapi.models.tacoLover import TacoLover
+
+from taco2goapi.views import taco_lover
 
 @api_view(['POST'])
 @permission_classes([AllowAny])
 def login_user(request):
-    '''Handles the authentication of a gamer
+    '''Handles the authentication of a tacoLover
 
     Method arguments:
       request -- The full HTTP request object
@@ -47,18 +51,22 @@ def register_user(request):
     new_user = User.objects.create_user(
         username=request.data['username'],
         password=request.data['password'],
+        email=request.data['email'],
         first_name=request.data['first_name'],
         last_name=request.data['last_name']
     )
 
-    # Now save the extra info in the levelupapi_gamer table
-    user = User.objects.create(
-        bio=request.data['bio'],
+    # Now save the extra info in the taco_lover table
+    taco_lover = TacoLover.objects.create(
+        profilePic=request.data['profilePic'],
+        userCity=request.data['userCity'],
+        email=request.data['email'],
+        userState=request.data['userState'],
         user=new_user
     )
 
     # Use the REST Framework's token generator on the new user account
-    token = Token.objects.create(user=user.user)
+    token = Token.objects.create(user=new_user)
     # Return the token to the client
     data = { 'token': token.key }
     return Response(data)
