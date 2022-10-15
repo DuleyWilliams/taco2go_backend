@@ -7,6 +7,11 @@ from taco2goapi.models.tacoLover import TacoLover
 from taco2goapi.models.shell import Shell
 from taco2goapi.models.protein import Protein
 from django.contrib.auth.models import User
+from taco2goapi.models.tacoSauce import TacoSauce
+from taco2goapi.models.sauce import Sauce
+
+from taco2goapi.models.tacoTopping import TacoTopping
+from taco2goapi.models.topping import Topping
 
 class MyBuiltTacoView(ViewSet):
     """ My Built Tacos Viewset """
@@ -29,14 +34,26 @@ class MyBuiltTacoView(ViewSet):
     def create(self, request):
         """ Handle a POST request for a built taco """
         user = TacoLover.objects.get(user=request.auth.user)
-        protein = Protein.objects.get(id=request.data["tacoProteinId_id"])
-        shell = Shell.objects.get(id=request.data["tacoShellId_id"])
+        protein = Protein.objects.get(id=request.data["protein_id"])
+        shell = Shell.objects.get(id=request.data["shell_id"])
         new_my_built_taco = MyBuiltTaco.objects.create(
             name=request.data["name"],
             tacoLoverId=user,
             tacoProteinId=protein,
             tacoShellId=shell
         )
+        topping_ids = request.data["topping_ids"]
+        for topping_id in topping_ids:
+            TacoTopping.objects.create(
+                toppingId=Topping.objects.get(pk=topping_id),
+                myBuiltTacoId=new_my_built_taco
+            )
+        sauce_ids = request.data["sauce_ids"]
+        for sauce_id in sauce_ids:
+            TacoSauce.objects.create(
+                sauceId=Sauce.objects.get(pk=sauce_id),
+                myBuiltTacoId=new_my_built_taco
+            )
         serializer = MyBuiltTacoSerializer(new_my_built_taco)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
     

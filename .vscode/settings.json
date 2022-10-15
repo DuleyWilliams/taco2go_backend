@@ -6,6 +6,7 @@
         "--django-settings-module=taco2go.settings",
     ],
     "cSpell.words": [
+        "authtoken",
         "corsheaders",
         "goapi",
         "Viewset",
