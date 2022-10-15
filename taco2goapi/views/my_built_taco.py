@@ -80,13 +80,32 @@ class MyBuiltTacoView(ViewSet):
         
         return Response(None, status=status.HTTP_204_NO_CONTENT)
     
+class SauceSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Sauce
+        fields = (
+            'id',
+            'type')
+
+class ToppingSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Topping
+        fields = (
+            'id',
+            'type')
+    
 class MyBuiltTacoSerializer(serializers.ModelSerializer):
     """JSON serializer for mybuilttacos types"""
+    sauces = SauceSerializer(many=True)
+    toppings = ToppingSerializer(many=True)
     class Meta:
+        depth = 1
         model = MyBuiltTaco
         fields = (
             'id',
-            'tacoLoverId_id',
-            'tacoProteinId_id',
-            'tacoShellId_id',
-            'name')
+            'tacoLoverId',
+            'tacoProteinId',
+            'tacoShellId',
+            'name',
+            'sauces',
+            'toppings')
