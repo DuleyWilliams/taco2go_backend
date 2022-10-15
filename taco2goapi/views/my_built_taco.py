@@ -108,4 +108,7 @@ class MyBuiltTacoSerializer(serializers.ModelSerializer):
             'tacoShellId',
             'name',
             'sauces',
-            'toppings')
+            'toppings',
+            'topping_ids',
+            'sauce_ids'
+            )
