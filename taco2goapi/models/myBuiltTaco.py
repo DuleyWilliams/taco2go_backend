@@ -20,3 +20,10 @@ class MyBuiltTaco(models.Model):
         taco_toppings=self.taco_toppings.all()
         return [tt.toppingId for tt in taco_toppings]
     
+    @property
+    def topping_ids(self):
+        return [tt.id for tt in self.toppings]
+    
+    @property
+    def sauce_ids(self):
+        return [s.id for s in self.sauces]

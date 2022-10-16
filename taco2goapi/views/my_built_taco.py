@@ -60,13 +60,30 @@ class MyBuiltTacoView(ViewSet):
     
     def update(self, request, pk):
         """ Handles a PUT request for a menu item """
-        editing_my_built_taco = MyBuiltTaco.objects.get(pk=pk)
+        taco_to_edit = MyBuiltTaco.objects.get(pk=pk)
         
-        editing_my_built_taco.tacoLoverId_id = request.data["tacoLoverId_id"]
-        editing_my_built_taco.tacoProteinId_id = request.data["tacoProteinId_id"]
-        editing_my_built_taco.tacoShellId_id = request.data["tacoShellId_id"]
-        editing_my_built_taco.name = request.data["name"]
-        editing_my_built_taco.save()
+        taco_to_edit.tacoProteinId = Protein.objects.get(pk=request.data["protein_id"])
+        taco_to_edit.tacoShellId = Shell.objects.get(pk=request.data["shell_id"])
+        taco_to_edit.name = request.data["name"]
+        # delete all current taco_topping relationships; then, iterate over the new list of 
+        #topping_ids and create fresh ones
+        for taco_topping in taco_to_edit.taco_toppings.all():
+            taco_topping.delete()
+        for topping_id in request.data["topping_ids"]:
+            TacoTopping.objects.create(
+                toppingId=Topping.objects.get(pk=topping_id),
+                myBuiltTacoId=taco_to_edit
+            )
+        # ditto to taco_sauces
+        for taco_sauce in taco_to_edit.taco_sauces.all():
+            taco_sauce.delete()
+        for sauce_id in request.data["sauce_ids"]:
+            TacoSauce.objects.create(
+                sauceId=Sauce.objects.get(pk=sauce_id),
+                myBuiltTacoId=taco_to_edit
+            )
+
+        taco_to_edit.save()
         
         return Response(None, status=status.HTTP_204_NO_CONTENT)
     
@@ -108,4 +125,7 @@ class MyBuiltTacoSerializer(serializers.ModelSerializer):
             'tacoShellId',
             'name',
             'sauces',
-            'toppings')
+            'toppings',
+            'topping_ids',
+            'sauce_ids'
+            )
